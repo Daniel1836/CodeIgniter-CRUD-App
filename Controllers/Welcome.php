@@ -16,14 +16,14 @@ class Welcome extends CI_Controller {
 	}
 
 	public function save()
-  {
+        {
 			$data = $this->input->post();
 			unset($data['submit']);
 			$this->load->model('queries');
 			$this->queries->addPost($data);
 			return redirect('http://localhost:8001/welcome');
 
-  }
+        }
 	public function update($id)
   {
 		$this->load->model('queries');
